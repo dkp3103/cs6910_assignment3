@@ -7,8 +7,6 @@
 4. `numpy`
 5. `matplotlib`
 6. `pandas`
-7. `sklearn.utils.shuffle` (for shuffling dataset)
-8. `seaborn` (for attention heatmap visualization)
 
 # File Structre
 A breif description of the list of files, and their respective purposes.
