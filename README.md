@@ -7,10 +7,6 @@
 5. `matplotlib`
 6. `pandas`
 
-# File Structre
-A breif description of the list of files, and their respective purposes.
-1. `AksharantarDataset.py` - A class for handling data and all the data related method
-
 # Classes in Sequence Learning
 ## `Encoder`
     Init Parameters:
