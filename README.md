@@ -119,21 +119,5 @@ A breif description of the list of files, and their respective purposes.
 3. Call `Seq2Seq.learn()` method
 4. Visualize the results using `Utils.plot_graphs()`
 
-## Early Stopping
-Early stopping is performed for two reasons in the code:
-1. To prevent the execution of extremely ineffecient models. (A model is emprically observed to be inefficient if the `validation_accuracy` does not improve beyond 10% even after 5 epochs)
-2. To prevent models from overfitting (A model is considered to be overfitting if the `validation_accuracy` is consistenly decreasing for 5 epochs)
-
-## TFR method
-I emprically observed that the models tend to learn faster if the teacher forcing is performed as a combination of both epoch wise and batch wise.  
-For the first 50% of the epochs: Each batch is applied with teacher forcing with the teacher forcing probability of `teacher_forcing_ratio`
-For the second 50% of the epochs: Teacher forcing ratio is not applied
-
-# Command Line Interface
-Using `train.py` - For help related on how to use `train.py`, type `python train.py -h`  
-*Best Models*:  
-Configuration for the best model without using attention:  
-`python train.py --batch_size 128 --epochs 9 --learning_rate 0.001 --embedding_size 32 --encoder_layers 3 --decoder_layers 2 --enc_dropout 0.3 --dec_dropout 0.3 --hidden_size 256 --rnn_class LSTM --bi_directional`
-
 Configuration for the best model using attention:   
-`python train.py --batch_size 128 --epochs 16 --learning_rate 0.001 --embedding_size 128 --encoder_layers 3 --decoder_layers 2 --enc_dropout 0.2 --dec_dropout 0.2 --hidden_size 256 --rnn_class LSTM --bi_directional --attention`
+`--batch_size 64 --epochs 15 --learning_rate 0.001 --embedding_size 64 --encoder_layers 3 --decoder_layers 3 --enc_dropout 0.2 --dec_dropout 0.2 --hidden_size 512 --rnn_class LSTM --bi_directional --attention`
